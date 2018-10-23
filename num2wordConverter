@@ -1,0 +1,22 @@
+'''Q2: Write a program that accepts an array of numbers and returns an array of numbers in written form e.g.
+[1,4,6] → [“one”, “four”, “six”]
+[0,0,6,2,7] → [“zero”, “zero”, “six”,"two","seven"]
+[5,4,3,2,1,5,8] → ["five", "four", "three", "two", "one", "five","eight"]
+'''
+
+arrayOfNumbers=[]
+arrayOfWords=[]
+numbersWords=['zero','one','two','three','four','five','six','seven','eight','nine']
+print("welcome to num2WordConverter app")
+arrayLength=int(input("enter the size of numbers array: "))           #enter size of array by user
+print("enter {} numbers of array".format(arrayLength))
+i=0
+while(i<arrayLength):       #enter numbers to the array
+    arrayOfNumbers.append(int(input()))
+    i+=1
+print("the array of numbers : {}".format(arrayOfNumbers))
+
+for numbers in arrayOfNumbers:              #loop for insert word of each numbers
+    arrayOfWords.append(numbersWords[numbers])
+
+print("the array of numbers words : {}".format(arrayOfWords))
